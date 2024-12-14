@@ -1,3 +1,23 @@
+---
+title: "Remix.run"
+synopsis: "Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience."
+date: 2024-12-14
+author:
+  name: "Arno Boenders"
+  socials:
+    website: ""
+    linkedin: "https://www.linkedin.com/in/arno-boenders-816117228/"
+    github: "https://github.com/pgm-arnoboenders"
+thumbnailUrl: "/assets/tutorials/remix/Remix_thumbnail.jpeg"
+head:
+  - - meta
+    - name: description
+      content: "Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience."
+  - - meta
+    - name: keywords
+      content: "Remix Node HTML Javascript CSS Web-application Full-stack Server-side rendering Nested-routes Authentication Protected-routes"
+---
+
 # Remix.run Tutorial
 
 ## Introduction to Remix.run
@@ -84,10 +104,10 @@ After this you can navigate to the project folder and start the project with
 npm run dev
 ```
 
-This will start the project on [`localhost:5173`](http://localhost:5173).
+This will start the project on `http://localhost:5173`.
 
 You should be able to see a non styled remix contacts page like this:
-![Remix Contacts Page](/public/images/Remix_contacts.webp)
+![Remix Contacts Page](./public/images/Remix_contacts.webp)
 
 ## Styling
 
@@ -109,7 +129,7 @@ export const links: LinksFunction = () => [
 The `LinksFunction` is a Remix function that allows you to add links to the head of the document. We are using it to add the css file to the head of the document.
 
 The application should look something like this now:
-![Remix Contacts Page Styled](/public/images/Remix_contacts_styled.webp)
+![Remix Contacts Page Styled](./public/images/Remix_contacts_styled.webp)
 
 ## Changing files
 
@@ -432,7 +452,7 @@ export default function App() {
 ```
 
 Now you should be able to see something like this:
-![Remix Events Page](/public/images/Remix_event_detail_start.jpg)
+![Remix Events Page](./public/images/Remix_event_detail_start.jpg)
 
 ### Client side routing
 
@@ -533,7 +553,7 @@ export default function App() {
 ```
 
 The sidebar should look something like this now:
-![Remix sidebar](/public/images/Remix_sidebar.jpg)
+![Remix sidebar](./public/images/Remix_sidebar.jpg)
 
 ## Url Parameters
 
@@ -563,7 +583,7 @@ export default function Contact() {
 ```
 
 This is what you should see now:
-![Remix event detail](/public/images/Remix_event_detail_fetched.jpg)
+![Remix event detail](./public/images/Remix_event_detail_fetched.jpg)
 
 In this code are errors but we are now going to address them.
 
@@ -606,7 +626,7 @@ export const action = async () => {
 ```
 
 Now press the "new" button and it should create an empty event.
-![Remix new event](/public/images/Remix_new_event.jpg)
+![Remix new event](./public/images/Remix_new_event.jpg)
 
 You might have noticed that the sidebar updated automatically. Remix uses the `POST` method as a hint to revalidate the data automatically after an action finishes.
 
@@ -709,7 +729,7 @@ export default function EditEvent() {
 Now when you click on the "Edit" button you will be redirected to the edit page. Here you can edit the event and save it.
 
 It should look something like this:
-![Remix edit event](/public/images/Remix_event_edit.jpg)
+![Remix edit event](./public/images/Remix_event_edit.jpg)
 
 This will not work right now because we do not have an action to save the event. We will be adding this now.
 
@@ -769,7 +789,7 @@ export const action = async () => {
 };
 ```
 
-Now when you click on the "new" button you will be redirected to the edit page like this: ![Remix new event redirect](/public/images/Remix_new_event_redirect.jpg)
+Now when you click on the "new" button you will be redirected to the edit page like this: ![Remix new event redirect](./public/images/Remix_new_event_redirect.jpg)
 
 ## Deleting an event
 
@@ -929,7 +949,7 @@ export default function App() {
 ```
 
 Now when you click on the favorite button the event will be favorited and the sidebar will show a star next to the event. It will look like this:
-![Remix favorite event](/public/images/Remix_favorite_event.jpg)
+![Remix favorite event](./public/images/Remix_favorite_event.jpg)
 
 ## Extra styling
 
@@ -996,7 +1016,7 @@ export default function App() {
 As you can see in the `className` prop we are checking if the link is active or pending. If it is active we will add the class `active` to the link. If it is pending we will add the class `pending` to the link.
 
 This makes it look like this:
-![Remix active link](/public/images/Remix_active_link.jpg)
+![Remix active link](./public/images/Remix_active_link.jpg)
 
 Next up we will add a loading state to the navigation so the user knows that the page is loading and the app feels more responisive.
 
@@ -1041,7 +1061,7 @@ export default function App() {
 ```
 
 It should look like this while a new event loads:
-![Remix loading state](/public/images/Remix_event_loading.jpg)
+![Remix loading state](./public/images/Remix_event_loading.jpg)
 
 You may notice that it does not do that, but that may be because the event is loading too fast.
 
@@ -1067,8 +1087,8 @@ export default function Index() {
 }
 ```
 
-Now when you go to the index url http://localhost:5173/ you will see the index page:
-![Remix index page](/public/images/Remix_index_page.jpg)
+Now when you go to the index url `http://localhost:5173/` you will see the index page:
+![Remix index page](./public/images/Remix_index_page.jpg)
 
 ## Cancel
 
@@ -1279,7 +1299,7 @@ When you start typing in the searchbox now it will automatically search for the 
 
 You might have noticed when you hold click on the backbutton of the browser that you can see the history stack. This is not a good user experience and we will be fixing this now.
 
-![Remix history stack](/public/images/Remix_history_stack.jpg)
+![Remix history stack](./public/images/Remix_history_stack.jpg)
 
 This can be fixed by adding `replace` to the submit function inside onChange.
 
@@ -1380,7 +1400,7 @@ export default function App() {
 ```
 
 Now when you try searching for an event you will see a spinner in the search box.
-![Remix search spinner](/public/images/Remix_spinner.jpg)
+![Remix search spinner](./public/images/Remix_spinner.jpg)
 
 ## Authentication
 
@@ -1688,7 +1708,7 @@ export default function App() {
 ```
 
 Because we are not yet logged in it will look something like this:
-![Remix login button](/public/images/Remix_login_button.jpg)
+![Remix login button](./public/images/Remix_login_button.jpg)
 
 ### Login
 
@@ -1784,7 +1804,7 @@ Now when you click on the login button you will be redirected to the login page.
 - Email: user@mail.com
 - Password: test
 
-![Remix login page](/public/images/Remix_login.jpg)
+![Remix login page](./public/images/Remix_login.jpg)
 
 ### Logout
 
@@ -1826,7 +1846,7 @@ export async function action({ request }: ActionFunctionArgs) {
 The action in this file will destroy the session and redirect the user to the login page.
 
 When you are logged in and you click on the logout button you will see this page:
-![Remix logout page](/public/images/Remix_logout.jpg)
+![Remix logout page](./public/images/Remix_logout.jpg)
 
 When you click on the "Yes" button you will be redirected to the login page and you will be logged out.
 
@@ -1870,7 +1890,7 @@ We firstly need to import the `sessionStorage` from the `session.server.ts` file
 
 The rest is pretty self explanatory. We get the user from the session and we show the name of the user. If the user is not logged in we will show "Guest".
 
-![Remix user name](/public/images/Remix_logged_in.jpg)
+![Remix user name](./public/images/Remix_logged_in.jpg)
 
 ### Protecting routes
 
@@ -1902,7 +1922,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
 
 When you are logged in you will now be able to access the detail pages of the events like before. But when you log out and try to access the detail pages you will be redirected to the login page.
 
-![Remix protected route](/public/images/Remix_protected_route.jpg)
+![Remix protected route](./public/images/Remix_protected_route.jpg)
 
 ## Conclusion
 In this tutorial we have gone over a lot of things. We have gone over the basics of Remix and how to create a simple application with it. We have gone over how to create a new event, edit an event, delete an event, favorite an event, search for an event, add authentication and protect routes.
@@ -1912,3 +1932,10 @@ What we can take away from this is that Remix has a superior way of handling dat
 Remix routing is very good in my opinion but it can become very cluttered and hard to read. This is because you have to create a new file for every route. I much prefer the way Next.js handles routing. But this is just a personal preference.
 
 Hopefully this tutorial has helped you understand Remix a bit better and how to create a simple application with it.
+
+## Used resources
+- [Remix documentation](https://remix.run/docs/en/v1)
+- [Remix Auth](https://remix.run/resources/remix-auth)
+- [ChatGPT](https://www.chatgpt.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [bcrypt.js](https://www.npmjs.com/package/bcryptjs)
